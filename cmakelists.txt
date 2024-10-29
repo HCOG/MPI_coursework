@@ -1,0 +1,22 @@
+cmake_minimum_required(VERSION 3.12)
+project(coursework LANGUAGES CXX)
+
+# Set C++ Standard
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# Find MPI package
+find_package(MPI REQUIRED)
+
+# Add executable for the parallel version
+add_executable(cw Parallel_Reaction_Equations.cpp)
+# Link MPI libraries to the parallel executable
+target_link_libraries(cw PRIVATE MPI::MPI_CXX)
+
+# Add executable for the serial version
+add_executable(serial Serial_Reaction_Equations.cpp)
+
+# If there are specific libraries or directories for the serial executable, set them similarly
+# For example, if the serial version requires some extra libraries you could do:
+# target_link_libraries(serial PRIVATE some_library)
+
