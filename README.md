@@ -21,7 +21,7 @@ Ensure you have the following installed on your system:
 To clone the repository, run the following command in your terminal:
 
 ```bash
-git clone https://github.com/ese-msc-2023/ppp-mpi-assessment-acse-zd1420.git
+git clone https://github.com/HCOG/MPI_coursework.git
 cd ppp-mpi-assessment-acse-zd1420
 chmod +x run_mpi.sh
 ./run_mpi.sh
